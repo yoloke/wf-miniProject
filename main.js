@@ -1,6 +1,4 @@
 import App from './App'
-import axios from 'axios'
-import './src/mock/mock.js'
 import {
   $http
 } from '@escook/request-miniprogram'

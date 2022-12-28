@@ -9,6 +9,9 @@
       return {
 
       };
+    },
+    onLoad(options) {
+      console.log(options);
     }
   }
 </script>

@@ -12,12 +12,6 @@
       }
     },
     {
-      "path": "pages/replace/replace",
-      "style": {
-        "navigationBarTitleText": "智能选芯"
-      }
-    },
-    {
       "path": "pages/apply/apply",
       "style": {
         "navigationBarTitleText": "应用方案"
