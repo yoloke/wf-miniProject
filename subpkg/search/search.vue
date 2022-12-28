@@ -2,7 +2,7 @@
   <view>
     <view class="search-box">
       <uni-search-bar @input="input" :radius="100" cancelButton="none" v-model="kw"></uni-search-bar>
-      <view class="search-title" v-if="searchResults.length !== 0">
+      <view class="search-title" v-if="kw.length!==0">
         找到<text>{{searchResults.length}} </text> 条结果
       </view>
     </view>
@@ -15,13 +15,13 @@
       </view>
     </view>
 
-    <view v-else>
+    <view v-if="kw.length==0">
       <!-- 搜索历史 -->
       <view class="history-box">
         <!-- 标题区域 -->
         <view class="history-title">
           <text>历史记录</text>
-          <uni-icons type="trash" size="18" @click="clean" color='#989898'></uni-icons>
+          <view class="iconfont icon-Delete" @click="clean"></view>
         </view>
         <!-- 列表区域 -->
         <view class="history-list">
@@ -99,7 +99,6 @@
       saveSearchHistory() {
         //直接把搜索关键词 push 到 historyList 数组中
         // this.historyList.push(this.kw)
-
         // 1. 将 Array 数组转化为 Set 对象
         const set = new Set(this.historyList)
         if (this.kw.trim().length != 0) {
@@ -129,6 +128,7 @@
         return [...this.historyList].reverse()
       }
     }
+
   }
 </script>
 

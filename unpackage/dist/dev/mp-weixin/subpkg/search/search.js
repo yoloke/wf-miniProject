@@ -103,9 +103,6 @@ try {
     uniSearchBar: function () {
       return Promise.all(/*! import() | uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue */ 110))
     },
-    uniIcons: function () {
-      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 102))
-    },
     uniTag: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-tag/components/uni-tag/uni-tag */ "uni_modules/uni-tag/components/uni-tag/uni-tag").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-tag/components/uni-tag/uni-tag.vue */ 121))
     },
@@ -290,7 +287,6 @@ var _default = {
     saveSearchHistory: function saveSearchHistory() {
       //直接把搜索关键词 push 到 historyList 数组中
       // this.historyList.push(this.kw)
-
       // 1. 将 Array 数组转化为 Set 对象
       var set = new Set(this.historyList);
       if (this.kw.trim().length != 0) {
