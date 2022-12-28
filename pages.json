@@ -1,0 +1,96 @@
+{
+  "pages": [{
+      "path": "pages/home/home",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cate/cate",
+      "style": {
+        "navigationBarTitleText": "分类导航"
+      }
+    },
+    {
+      "path": "pages/replace/replace",
+      "style": {
+        "navigationBarTitleText": "智能选芯"
+      }
+    },
+    {
+      "path": "pages/apply/apply",
+      "style": {
+        "navigationBarTitleText": "应用方案"
+      }
+    },
+    {
+      "path": "pages/my/my",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "subPackages": [{
+    "root": "subpkg",
+    "pages": [{
+      "path": "goods_detail/goods_detail",
+      "style": {}
+    }, {
+      "path": "search/search",
+      "style": {
+        "navigationBarTitleText": "搜索结果"
+      }
+    }, {
+      "path": "my_service/my_service",
+      "style": {
+        "navigationBarTitleText": "伟烽服务"
+      }
+
+    }, {
+      "path": "cooperation/cooperation",
+      "style": {
+        "navigationBarTitleText": "供应商合作"
+      }
+
+    }]
+  }],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#3266cc"
+  },
+  "uniIdRouter": {},
+  "tabBar": {
+    "selectedColor": "#3869b0",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "查询",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "static/tab_icons/cate.png",
+        "selectedIconPath": "static/tab_icons/cate-active.png"
+      },
+      // {
+      //   "pagePath": "pages/replace/replace",
+      //   "text": "替代",
+      //   "iconPath": "static/tab_icons/replace.png",
+      //   "selectedIconPath": "static/tab_icons/replace-active.png"
+      // },
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "应用",
+        "iconPath": "static/tab_icons/apply.png",
+        "selectedIconPath": "static/tab_icons/apply-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"
+      }
+    ]
+  }
+}
