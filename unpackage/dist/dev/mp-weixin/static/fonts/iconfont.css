@@ -14,6 +14,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-liebiao:before {
+  content: "\ec6b";
+}
+
+.icon-dakai:before {
+  content: "\ebdf";
+}
+
+.icon-baocun:before {
+  content: "\ec09";
+}
+
+.icon-pdf:before {
+  content: "\e662";
+}
+
+.icon-shujufenxi-liuliangfenxi:before {
+  content: "\e600";
+}
+
 .icon-gongnengdingyi:before {
   content: "\eb62";
 }
