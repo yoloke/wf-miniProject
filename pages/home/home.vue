@@ -30,30 +30,9 @@
       </view>
     </view>
     <view class="hot-goods-list">
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
-      <view class="item">
-        <image src="../../static/hot-goods/test1.png" mode="widthFix"></image>
-      </view>
+      <navigator class="item" v-for="(item,i) in 8" :key="i" url="/subpkg/goods_detail/goods_detail?goods_id=569">
+        <image :src="testImg" mode="widthFix"></image>
+      </navigator>
 
     </view>
     <view class="common-features">
@@ -61,53 +40,52 @@
         常用功能
       </view>
       <view class="common-features-list">
-        <view class="item" @click="gotoCate()">
+        <navigator url="../cate/cate" class="item" open-type="switchTab">
           <view class="iconfont icon-RectangleCopy18"></view>
           <view class="title">
             参数选型
           </view>
-        </view>
-        <view class="item">
+        </navigator>
+        <navigator url="../../subpkg/goods_all/goods_all" class="item">
           <view class="iconfont icon-RectangleCopy2"></view>
           <view class="title">
             全部产品
           </view>
-        </view>
-        <view class="item">
+        </navigator>
+        <navigator url="/subpkg/goods_history/goods_history" class="item">
           <view class="iconfont icon-history-copy"></view>
           <view class="title">
             最近浏览
           </view>
-        </view>
-        <view class="item" @click="gotoApply()">
+        </navigator>
+        <navigator url="/pages/apply/apply" class="item" open-type="switchTab">
           <view class=" iconfont icon-gongnengdingyi"></view>
           <view class="title">
             应用方案
           </view>
-        </view>
-        <view class="item" @click="gotoMyService">
+        </navigator>
+        <navigator url="/subpkg/my_service/my_service" class="item">
           <view class=" iconfont icon-RectangleCopy14"></view>
           <view class="title">
             伟烽服务
           </view>
-        </view>
-        <view class="item" @click="gotoCooperation">
+        </navigator>
+        <navigator url="/subpkg/cooperation/cooperation" class="item">
           <view class="iconfont icon-RectangleCopy1"></view>
           <view class="title">
             供应商合作
           </view>
-        </view>
-        <view class="item" @click="gotoSearch">
+        </navigator>
+        <navigator url="../../subpkg/search/search" class="item">
           <view class="iconfont icon-chaxun"></view>
           <view class="title">
             丝印查询
           </view>
-        </view>
+        </navigator>
         <view class="item">
+          <button open-type="share"></button>
           <view class="iconfont icon-share"></view>
-          <view class="title">
-            分享好友
-          </view>
+          <view class="title">分享好友</view>
         </view>
       </view>
     </view>
@@ -119,45 +97,30 @@
     data() {
       return {
         hotList: ['DETRTR', 'FDFDFD', 'GFDGD', 'FDFD78'],
-        hotImgList: ['']
+        hotImgList: [''],
+        testImg: '../../static/hot-goods/test1.png'
       };
     },
     onLoad() {
       this.getHotList()
     },
     methods: {
-      async getHotList() {
-        //const res = await api.getHotList()
-        // console.log(res);
-      },
-      // 跳转到分包中的搜索页面
-      gotoSearch() {
-        uni.navigateTo({
-          url: '/subpkg/search/search'
-        })
-      },
-      gotoCate() {
-        uni.switchTab({
-          url: '/pages/cate/cate'
-        })
-      },
-      gotoApply() {
-        uni.switchTab({
-          url: '/pages/apply/apply'
-        })
-      },
-      gotoMyService() {
-        uni.navigateTo({
-          url: '/subpkg/my_service/my_service'
-        })
-      },
-      gotoCooperation() {
-        uni.navigateTo({
-          url: '/subpkg/cooperation/cooperation'
-        })
+      async getHotList() {},
+    },
+    onShareAppMessage(res) {
+      return {
+        title: '伟烽恒科技有限公司',
+        path: '/pages/home/home'
       }
     },
-
+    //分享到朋友圈
+    onShareTimeline(res) {
+      return {
+        title: '伟烽恒科技有限公司',
+        type: 0,
+        summary: "",
+      }
+    },
   }
 </script>
 
@@ -298,6 +261,19 @@
         align-items: center;
         justify-content: center;
         color: #757575;
+        background-color: #fff;
+
+        button {
+          margin: unset;
+          position: absolute;
+          height: 100rpx;
+          width: 100rpx;
+          opacity: 0;
+        }
+
+        button:after {
+          border: unset;
+        }
 
         .iconfont {
           font-size: 60rpx;

@@ -12,7 +12,9 @@
         "goods_detail/goods_detail",
         "search/search",
         "my_service/my_service",
-        "cooperation/cooperation"
+        "cooperation/cooperation",
+        "goods_history/goods_history",
+        "goods_all/goods_all"
       ]
     }
   ],

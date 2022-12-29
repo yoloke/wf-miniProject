@@ -134,6 +134,17 @@ page {
   align-items: center;
   justify-content: center;
   color: #757575;
+  background-color: #fff;
+}
+.common-features .common-features-list .item button {
+  margin: unset;
+  position: absolute;
+  height: 100rpx;
+  width: 100rpx;
+  opacity: 0;
+}
+.common-features .common-features-list .item button:after {
+  border: unset;
 }
 .common-features .common-features-list .item .iconfont {
   font-size: 60rpx;

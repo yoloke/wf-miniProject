@@ -56,6 +56,9 @@
   font-size: 50rpx;
   color: #3167c9;
 }
+.parm-list .goods-specification .box .icon-pdf {
+  color: #d5200a;
+}
 .parm-list .goods-specification .box text {
   font-size: 20rpx;
   color: #b8b8b8;

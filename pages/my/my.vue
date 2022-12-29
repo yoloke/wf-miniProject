@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="header">
-      <image class="target" src="../../static/target.webp" mode="widthFix"></image>
+      <image class="target" src="../../static/target.jpg" mode="widthFix"></image>
       <block>尊敬的会员</block>
       <view class="username">{{username}}</view>
     </view>

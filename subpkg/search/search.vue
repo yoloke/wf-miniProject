@@ -17,7 +17,7 @@
 
     <view v-if="kw.length==0">
       <!-- 搜索历史 -->
-      <view class="history-box">
+      <view class="history-box" v-if="histories.length !==0">
         <!-- 标题区域 -->
         <view class="history-title">
           <text>历史记录</text>

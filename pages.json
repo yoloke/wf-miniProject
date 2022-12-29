@@ -46,6 +46,18 @@
         "navigationBarTitleText": "供应商合作"
       }
 
+    }, {
+      "path": "goods_history/goods_history",
+      "style": {
+        "navigationBarTitleText": "最近浏览"
+      }
+
+    }, {
+      "path": "goods_all/goods_all",
+      "style": {
+        "navigationBarTitleText": "全部产品"
+      }
+
     }]
   }],
   "globalStyle": {
@@ -67,12 +79,6 @@
         "iconPath": "static/tab_icons/cate.png",
         "selectedIconPath": "static/tab_icons/cate-active.png"
       },
-      // {
-      //   "pagePath": "pages/replace/replace",
-      //   "text": "替代",
-      //   "iconPath": "static/tab_icons/replace.png",
-      //   "selectedIconPath": "static/tab_icons/replace-active.png"
-      // },
       {
         "pagePath": "pages/apply/apply",
         "text": "应用",
