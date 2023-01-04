@@ -57,6 +57,10 @@
       "postcss": false,
       "minified": false
     },
+    // 开启分包优化
+    "optimization": {
+      "subPackages": true
+    },
     "usingComponents": true
   },
   "mp-alipay": {

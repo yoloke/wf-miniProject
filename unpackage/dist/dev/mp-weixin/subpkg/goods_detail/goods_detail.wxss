@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30rpx;
+  padding: 0 16rpx 0 20rpx;
 }
 .parm-list view:nth-child(n+2) .iconfont {
   color: #3167c9;
@@ -51,6 +51,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 10rpx;
+  border: none;
 }
 .parm-list .goods-specification .box .iconfont {
   font-size: 50rpx;

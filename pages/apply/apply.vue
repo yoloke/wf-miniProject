@@ -7,11 +7,13 @@
       </view>
     </scroll-view>
     <view class="list">
-      <view class="list-item" v-for="(item, i) in cateLevel2" :key="i">
+      <navigator class="list-item" v-for="(item, i) in cateLevel2" :key="i" url="../../subpkg/my_apply/my_apply">
         <view class="icon1 iconfont icon-Delete"></view>
         {{item.cat_name}}
-        <view class="icon2 iconfont icon-next"></view>
-      </view>
+        <text class="date">2021-02-01</text>
+        <view class="icon2 iconfont icon-next">
+        </view>
+      </navigator>
     </view>
   </view>
 </template>
@@ -84,20 +86,19 @@
         padding-right: 20rpx;
       }
 
+      text {
+        position: absolute;
+        right: 80rpx;
+        font-size: 26rpx;
+        color: #b9b9b9;
+      }
+
       .icon2 {
         position: absolute;
         font-size: 50rpx;
-        right: 30rpx;
+        right: 20rpx;
         color: #cccccc;
       }
     }
-
-    // display: grid;
-    // justify-content: center;
-    // //grid-template-columns: 1fr 10fr;
-    // grid-column-gap: 10rpx;
-    // //grid-template-rows: repeat(5, 100rpx);
-    // border-bottom: 2rpx solid #c8c8c8;
-    // background-color: #fff;
   }
 </style>

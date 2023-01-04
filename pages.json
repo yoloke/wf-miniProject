@@ -27,8 +27,7 @@
   "subPackages": [{
     "root": "subpkg",
     "pages": [{
-      "path": "goods_detail/goods_detail",
-      "style": {}
+      "path": "goods_detail/goods_detail"
     }, {
       "path": "search/search",
       "style": {
@@ -57,6 +56,59 @@
       "style": {
         "navigationBarTitleText": "全部产品"
       }
+
+    }    ,{
+                    "path" : "my_apply/my_apply",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+  }, {
+    "root": "pages_my",
+    "pages": [{
+      "path": "my_news/my_news",
+      "style": {
+        "navigationBarTitleText": "我的消息"
+      }
+    }, {
+      "path": "my_collection/my_collection",
+      "style": {
+        "navigationBarTitleText": "我的收藏",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "my_email/my_email",
+      "style": {
+        "navigationBarTitleText": "绑定邮箱",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "my_feedback/my_feedback",
+      "style": {
+        "navigationBarTitleText": "意见反馈",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "contact_us/contact_us",
+      "style": {
+        "navigationBarTitleText": "联系我们",
+        "enablePullDownRefresh": false
+      }
+
+    }]
+  }, {
+    "root": "pages_goods",
+    "pages": [{
+      "path": "goods_pdf/goods_pdf"
+    }, {
+      "path": "goods_analysis/goods_analysis"
 
     }]
   }],

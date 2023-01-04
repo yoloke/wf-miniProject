@@ -10,41 +10,37 @@
         <view class="iconfont icon-interactive">
         </view>
       </view>
-      <view class="text">
+      <navigator url="../../pages_my/my_news/my_news" class="text">
         我的消息
-      </view>
+      </navigator>
       <view class="icon">
         <view class="iconfont icon-shoucang_shixin">
 
         </view>
       </view>
-      <view class="text">
+      <navigator url="../../pages_my/my_collection/my_collection" class="text">
         我的收藏
-      </view>
+      </navigator>
       <view class="icon">
-        <view class="iconfont icon-email">
-
-        </view>
+        <view class="iconfont icon-email"></view>
       </view>
-      <view class="text">
+      <navigator url="../../pages_my/my_email/my_email" class="text">
         绑定邮箱
-      </view>
+      </navigator>
       <view class="icon">
         <view class="iconfont icon-interactive">
-
         </view>
       </view>
-      <view class="text">
+      <navigator url="../../pages_my/my_feedback/my_feedback" class="text">
         意见反馈
-      </view>
+      </navigator>
       <view class="icon">
         <view class="iconfont icon-kefu">
-
         </view>
       </view>
-      <view class="text">
+      <navigator url="../../pages_my/contact_us/contact_us" class="text">
         联系我们
-      </view>
+      </navigator>
     </view>
     <view class="list2">
       <view class="icon">

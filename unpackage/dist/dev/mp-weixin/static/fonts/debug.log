@@ -1,3 +1,6 @@
 [1227/143614.685:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
 [1228/143616.341:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
 [1229/143617.938:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1230/095132.389:ERROR:process_reader_win.cc(90)] NtQuerySystemInformation: {没有足够配额} 没有足够的虚拟内存或分页文件配额以完成指定的操作。 (0xc0000017)
+[1230/095132.389:ERROR:exception_snapshot_win.cc(99)] thread ID 28416 not found in process
+[0103/170031.148:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)

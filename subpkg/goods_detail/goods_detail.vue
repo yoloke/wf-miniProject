@@ -9,7 +9,7 @@
         <view class="iconfont icon-pdf"></view>
         <text>pdf</text>
       </view>
-      <view class="box">
+      <view class="box" @click="gotoGoodsAnalysis">
         <view class="iconfont icon-shujufenxi-liuliangfenxi"></view>
         <text>分析</text>
       </view>
@@ -69,13 +69,6 @@
       };
     },
     onLoad(options) {
-      //设置menus将发送给朋友和分享到朋友圈两个按钮都可以点击
-      wx.showShareMenu({
-        withShareTicket: true,
-        //设置下方的Menus菜单，才能够让发送给朋友与分享到朋友圈两个按钮可以点击
-        menus: ["shareAppMessage", "shareTimeline"]
-      })
-      // 获取商品 Id
       const goods_id = options.goods_id
       this.title = options.goods_id
       // 调用请求商品详情数据的方法
@@ -141,13 +134,21 @@
 
       //浏览pdf文件
       openPdf() {
-        // wx.openDocument({
-        //   filePath: '/static/test.pdf',
-        //   fileType: 'pdf',
-        //   success: function(res) {
-        //     console.log('打开文档成功')
-        //   }
-        // })
+        wx.downloadFile({ //下载对应文件
+          url: "https://www.te.com.cn/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837_Grove_Board%7FA%7Fpdf%7FEnglish%7FENG_DS_MS5837_Grove_Board_A.pdf%7FCAT-DCS0043", // 下载文件网络地址
+          success: function(res) {
+            var filePath = res.tempFilePath; //本地文件路径    
+            uni.navigateTo({
+              url: '/pages_goods/goods_pdf/goods_pdf?src=' + filePath
+            })
+          }
+        })
+      },
+      gotoGoodsAnalysis() {
+        let goodInfo = JSON.stringify(this.goodInfo)
+        uni.navigateTo({
+          url: '/pages_goods/goods_analysis/goods_analysis?goods_info=' + goodInfo
+        })
       }
     },
     onShareAppMessage(res) {
@@ -182,7 +183,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 30rpx;
+      padding: 0 16rpx 0 20rpx;
 
       .iconfont {
         color: #3167c9;
@@ -203,6 +204,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 0 10rpx;
+        border: none;
 
         .iconfont {
           font-size: 50rpx;

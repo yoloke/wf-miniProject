@@ -1,6 +1,6 @@
 <template>
   <view class="goods-list">
-    <view class="goods-item" v-for="(item,i) in histories">
+    <view class="goods-item" v-for="(item,i) in histories" :key="i" @click="gotoDetail(item)">
       <view class="goods-info">
         <view class="goods-title">
           <view class="name">{{item.goods_name.slice(4,10)}}</view>
@@ -23,6 +23,11 @@
       }
     },
     methods: {
+      gotoDetail(item) {
+        uni.navigateTo({
+          url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
+        })
+      },
 
     },
     onLoad() {

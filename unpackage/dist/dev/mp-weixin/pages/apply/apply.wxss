@@ -50,10 +50,16 @@
 .list .list-item .icon1 {
   padding-right: 20rpx;
 }
+.list .list-item text {
+  position: absolute;
+  right: 80rpx;
+  font-size: 26rpx;
+  color: #b9b9b9;
+}
 .list .list-item .icon2 {
   position: absolute;
   font-size: 50rpx;
-  right: 30rpx;
+  right: 20rpx;
   color: #cccccc;
 }
 
