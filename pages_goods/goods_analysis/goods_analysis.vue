@@ -29,9 +29,7 @@
           <view class="gg">57V</view>
         </view>
         <view class="right2" v-if="!show">
-          <view class="charts-box">
-            <!-- <qiun-data-charts type="column" :chartData="chartData" /> -->
-          </view>
+          <qiun-data-charts type="radar" :opts="opts" :chartData="chartData" />
         </view>
       </view>
     </view>
@@ -40,8 +38,6 @@
 </template>
 
 <script>
-  // 将npm方式下载的echarts插件引入进来
-  import * as echarts from 'echarts';
   export default {
     data() {
       return {
@@ -49,9 +45,32 @@
         // 这里初始化一个null，待会儿用来充当echarts实例
         myChart: null,
         chartData: {},
+        opts: {
+          color: ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"],
+          padding: [1, 1, 1, 1],
+          dataLabel: false,
+          enableScroll: false,
+          legend: {
+            show: true,
+            position: "bottom",
+            lineHeight: 6,
+            fontSize: 8
+          },
+          extra: {
+            radar: {
+              gridType: "radar",
+              gridColor: "#CCCCCC",
+              gridCount: 3,
+              opacity: 0.2,
+              max: 200,
+              labelShow: true,
+              border: true
+            }
+          }
+        }
       }
     },
-    onReady() {
+    onLoad() {
       this.getServerData();
     },
     methods: {
@@ -59,27 +78,22 @@
         this.show = !this.show
       },
       getServerData() {
-        //模拟从服务器获取数据时的延时
         let res = {
-          categories: ["2016", "2017", "2018", "2019", "2020", "2021"],
+          categories: ["1", "2", "3", "4", "5", "6"],
           series: [{
-              name: "目标值",
-              data: [35, 36, 31, 33, 13, 34]
+              name: "成交量1",
+              data: [90, 110, 165, 195, 187, 172]
             },
             {
-              name: "完成量",
-              data: [18, 27, 21, 24, 6, 28]
+              name: "成交量2",
+              data: [190, 210, 105, 35, 27, 102]
             }
           ]
         };
         this.chartData = JSON.parse(JSON.stringify(res));
-
       },
     },
-    onLoad(options) {
-      //let goods_info = JSON.parse(options.goods_info)
-      //console.log(goods_info);
-    }
+
   }
 </script>
 
@@ -118,13 +132,18 @@
 
     .xx {
       display: flex;
+      height: 320rpx;
 
       .left {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         background-color: #d8f2d9;
 
         .gg {
-          padding: 20rpx;
+          height: 100%;
+          padding: 16rpx;
           border-right: 1rpx solid #c6d1c8;
           border-top: 1rpx solid #c6d1c8;
         }
@@ -146,15 +165,9 @@
 
       .right2 {
         flex: 2;
+        width: 20rpx;
         border-right: 1rpx solid #c6d1c8;
         border-top: 1rpx solid #c6d1c8;
-
-        .charts-box {
-          width: 100%;
-          height: 100%;
-
-
-        }
       }
     }
   }

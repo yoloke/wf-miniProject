@@ -1,4 +1,4 @@
-require('../common/vendor.js');(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages_goods/goods_pdf/goods_pdf"],{
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages_goods/goods_pdf/goods_pdf"],{
 
 /***/ 152:
 /*!*********************************************************************************************!*\
