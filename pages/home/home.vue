@@ -2,7 +2,7 @@
   <view>
     <view class="header">
       <view class="logo">
-        <image src="../../static/logo.png" mode="widthFix"></image>
+        <image src="https://wf-cloud-img.oss-cn-hangzhou.aliyuncs.com/image/logo.png" mode="widthFix"></image>
         <view class="logo_title">
           <text class="big_title">伟烽恒科技</text>
           <text class="small_title">www.weifengheng.com</text>
@@ -98,7 +98,7 @@
       return {
         hotList: ['DETRTR', 'FDFDFD', 'GFDGD', 'FDFD78'],
         hotImgList: [''],
-        testImg: '../../static/hot-goods/test1.png'
+        testImg: 'https://wf-cloud-img.oss-cn-hangzhou.aliyuncs.com/image/test1.png'
       };
     },
     onLoad() {

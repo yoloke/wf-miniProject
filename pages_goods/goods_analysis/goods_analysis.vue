@@ -8,31 +8,42 @@
         表格对比
       </view>
     </view>
+    <view class="goods-compare">
+      <view class="">
+        恒压恒流DC-DC
+      </view>
+      <view class="">
+        hggg
+      </view>
+      <view class="">
+        hjhh
+      </view>
+    </view>
     <view class="parms">
       <text class="title">—— 主要参数 ——</text>
-      <view class="xx">
+      <view class="parms-table">
         <view class="left">
-          <view class="gg">最大电阻压力</view>
-          <view class="gg">开关管阻抗</view>
-          <view class="gg">最大支持功率</view>
-          <view class="gg">最大工作温度</view>
-
+          <view class="parms-name">最大电阻压力</view>
+          <view class="parms-name">开关管阻抗</view>
+          <view class="parms-name">最大支持功率</view>
+          <view class="parms-name">最大工作温度</view>
         </view>
         <view class="right1" v-if="show">
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
-          <view class="gg">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
+          <view class="parms-name">57V</view>
         </view>
         <view class="right2" v-if="!show">
           <qiun-data-charts type="radar" :opts="opts" :chartData="chartData" />
         </view>
       </view>
     </view>
+
 
   </view>
 </template>
@@ -47,7 +58,7 @@
         chartData: {},
         opts: {
           color: ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"],
-          padding: [1, 1, 1, 1],
+          // padding: [1, 1, 1, 1],
           dataLabel: false,
           enableScroll: false,
           legend: {
@@ -60,11 +71,13 @@
             radar: {
               gridType: "radar",
               gridColor: "#CCCCCC",
-              gridCount: 3,
+              gridCount: 5,
               opacity: 0.2,
               max: 200,
               labelShow: true,
-              border: true
+              border: true,
+              // radius: 40
+              labelPointRadius: 1
             }
           }
         }
@@ -102,7 +115,7 @@
     display: flex;
     justify-content: space-around;
     font-size: 40rpx;
-    padding-bottom: 30rpx;
+    padding-bottom: 10rpx;
 
     view {
       padding: 30rpx 20rpx;
@@ -114,6 +127,22 @@
       }
     }
 
+  }
+
+  .goods-compare {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20rpx;
+
+    view {
+      width: 100%;
+      height: 120rpx;
+      line-height: 120rpx;
+      text-align: center;
+      border: 1rpx solid #c6d1c8;
+      padding: 0 10rpx;
+      font-size: 28rpx;
+    }
   }
 
   .parms {
@@ -130,20 +159,25 @@
       font-weight: 600;
     }
 
-    .xx {
+    .parms-table {
       display: flex;
-      height: 320rpx;
+      min-height: 0;
+      overflow: hidden;
 
       .left {
         flex: 1;
+        min-width: 0;
+        min-height: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         background-color: #d8f2d9;
 
-        .gg {
+        .parms-name {
           height: 100%;
-          padding: 16rpx;
+          padding: 22rpx;
+          display: flex;
+          align-items: center;
           border-right: 1rpx solid #c6d1c8;
           border-top: 1rpx solid #c6d1c8;
         }
@@ -154,7 +188,7 @@
         display: grid;
         grid-template-columns: auto auto;
 
-        .gg {
+        .parms-name {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -165,7 +199,7 @@
 
       .right2 {
         flex: 2;
-        width: 20rpx;
+        min-width: 0;
         border-right: 1rpx solid #c6d1c8;
         border-top: 1rpx solid #c6d1c8;
       }

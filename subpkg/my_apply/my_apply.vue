@@ -1,7 +1,7 @@
 <template>
   <view>
     <view class="img">
-      <image src="../../static/7.jpg" mode="widthFix"></image>
+      <image src="https://wf-cloud-img.oss-cn-hangzhou.aliyuncs.com/image/7.jpg" mode="widthFix"></image>
     </view>
     <view class="nav">
       <view class="active">芯片</view>

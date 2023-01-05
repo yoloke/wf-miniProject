@@ -57,6 +57,7 @@
       "postcss": false,
       "minified": false
     },
+    "lazyCodeLoading": "requiredComponents",
     // 开启分包优化
     "optimization": {
       "subPackages": true

@@ -69,5 +69,6 @@
       }
     ]
   },
+  "lazyCodeLoading": "requiredComponents",
   "usingComponents": {}
 }
