@@ -92,14 +92,16 @@ page {
 }
 .hot-goods-header .more {
   display: flex;
+  align-items: center;
   font-size: 24rpx;
 }
 .hot-goods-header .more text {
   display: block;
   margin: auto;
 }
-.hot-goods-header .more .uni-icons {
-  margin-left: 8rpx;
+.hot-goods-header .more .iconfont {
+  color: #999999;
+  font-size: 40rpx;
 }
 .hot-goods-list {
   display: grid;

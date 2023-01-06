@@ -2,7 +2,8 @@
   <view class="my-search-container">
     <!-- 使用 view 组件模拟 input 输入框的样式 -->
     <view class="my-search-box" @click="searchBoxHandler">
-      <uni-icons type="search" size="20" color="#999999"></uni-icons>
+      <view class="iconfont icon-sousuo"></view>
+      <!-- <uni-icons type="search" size="20" color="#999999"></uni-icons> -->
       <text class="placeholder">请输入您要的芯片型号</text>
     </view>
   </view>
@@ -44,6 +45,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .iconfont {
+      color: #999999
+    }
 
     .placeholder {
       color: #999999;

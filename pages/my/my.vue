@@ -8,32 +8,10 @@
     </view>
     <view class="list1">
       <view class="icon">
-        <view class="iconfont icon-interactive">
-        </view>
-      </view>
-      <navigator url="../../pages_my/my_news/my_news" class="text">
-        我的消息
-      </navigator>
-      <view class="icon">
-        <view class="iconfont icon-shoucang_shixin">
-
-        </view>
+        <view class="iconfont icon-shoucang"></view>
       </view>
       <navigator url="../../pages_my/my_collection/my_collection" class="text">
         我的收藏
-      </navigator>
-      <view class="icon">
-        <view class="iconfont icon-email"></view>
-      </view>
-      <navigator url="../../pages_my/my_email/my_email" class="text">
-        绑定邮箱
-      </navigator>
-      <view class="icon">
-        <view class="iconfont icon-interactive">
-        </view>
-      </view>
-      <navigator url="../../pages_my/my_feedback/my_feedback" class="text">
-        意见反馈
       </navigator>
       <view class="icon">
         <view class="iconfont icon-kefu">
@@ -46,7 +24,6 @@
     <view class="list2">
       <view class="icon">
         <view class="iconfont icon-tuichu">
-
         </view>
       </view>
       <view class="text">
@@ -101,7 +78,7 @@
     justify-content: center;
     grid-template-columns: 1fr 10fr;
     grid-column-gap: 10rpx;
-    grid-template-rows: repeat(5, 100rpx);
+    grid-template-rows: repeat(2, 100rpx);
     border-bottom: 2rpx solid #c8c8c8;
     background-color: #fff;
 
@@ -114,7 +91,6 @@
       .iconfont {
         font-size: 50rpx;
       }
-
     }
 
     .text {
@@ -155,7 +131,6 @@
       .iconfont {
         font-size: 50rpx;
       }
-
     }
 
     .text {

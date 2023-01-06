@@ -10,7 +10,7 @@
         <text>pdf</text>
       </view>
       <view class="box" @click="gotoGoodsAnalysis">
-        <view class="iconfont icon-shujufenxi-liuliangfenxi"></view>
+        <view class="iconfont icon-fenxi"></view>
         <text>分析</text>
       </view>
       <view class="box">

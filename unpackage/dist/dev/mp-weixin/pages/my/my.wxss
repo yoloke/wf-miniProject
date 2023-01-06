@@ -50,7 +50,7 @@ page {
   justify-content: center;
   grid-template-columns: 1fr 10fr;
   grid-column-gap: 10rpx;
-  grid-template-rows: repeat(5, 100rpx);
+  grid-template-rows: repeat(2, 100rpx);
   border-bottom: 2rpx solid #c8c8c8;
   background-color: #fff;
 }

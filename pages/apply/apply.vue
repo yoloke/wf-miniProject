@@ -1,6 +1,6 @@
 <template>
   <view>
-    <scroll-view class="scroll-view" :scroll-x="true">
+    <scroll-view class="scroll-view" :scroll-x="true" enhanced :show-scrollbar="false">
       <view :class="['scroll-item' ,  i === active ? 'active' : '']" v-for="(item, i) in cateList" :key="i"
         @click="activeChanged(i)">
         {{item.cat_name}}
@@ -8,7 +8,7 @@
     </scroll-view>
     <view class="list">
       <navigator class="list-item" v-for="(item, i) in cateLevel2" :key="i" url="../../subpkg/my_apply/my_apply">
-        <view class="icon1 iconfont icon-Delete"></view>
+        <view class="icon1 iconfont icon-yingyong"></view>
         {{item.cat_name}}
         <text class="date">2021-02-01</text>
         <view class="icon2 iconfont icon-next">
@@ -68,7 +68,7 @@
 
       &.active {
         color: #3266cc;
-        border-bottom: 4rpx solid #3266cc;
+        border-bottom: 3px solid #3266cc;
       }
     }
   }
@@ -84,11 +84,13 @@
 
       .icon1 {
         padding-right: 20rpx;
+        color: #3266cc;
+        font-size: 20px;
       }
 
       text {
         position: absolute;
-        right: 80rpx;
+        right: 60rpx;
         font-size: 26rpx;
         color: #b9b9b9;
       }
@@ -96,7 +98,7 @@
       .icon2 {
         position: absolute;
         font-size: 50rpx;
-        right: 20rpx;
+        right: 10rpx;
         color: #cccccc;
       }
     }

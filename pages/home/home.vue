@@ -8,14 +8,14 @@
           <text class="small_title">www.weifengheng.com</text>
         </view>
       </view>
-      <view class="search">
+      <navigator class="search" url="../../subpkg/search/search">
         <!-- 使用自定义的搜索组件 -->
-        <my-search @click="gotoSearch">
+        <my-search>
         </my-search>
-      </view>
+      </navigator>
       <view class="hotContain">
         <text class="hot">热搜型号 ：</text>
-        <text v-for="(item, i) in hotList" :key="i">{{item +' '}}</text>
+        <text v-for="(item, i) in hotList" :key="i" @click="gotoSearch(item)">{{item +' '}}</text>
       </view>
     </view>
     <view class="hot-goods-header">
@@ -24,10 +24,10 @@
           热门产品
         </view>
       </view>
-      <view class="more">
+      <navigator url="../../subpkg/goods_all/goods_all" class="more">
         <text>更多</text>
-        <uni-icons type="arrowright" color="#999999" size="20"></uni-icons>
-      </view>
+        <view class="iconfont icon-next"></view>
+      </navigator>
     </view>
     <view class="hot-goods-list">
       <navigator class="item" v-for="(item,i) in 8" :key="i" url="/subpkg/goods_detail/goods_detail?goods_id=569">
@@ -41,19 +41,19 @@
       </view>
       <view class="common-features-list">
         <navigator url="../cate/cate" class="item" open-type="switchTab">
-          <view class="iconfont icon-RectangleCopy18"></view>
+          <view class="iconfont icon-chaxun"></view>
           <view class="title">
             参数选型
           </view>
         </navigator>
         <navigator url="../../subpkg/goods_all/goods_all" class="item">
-          <view class="iconfont icon-RectangleCopy2"></view>
+          <view class="iconfont icon-changku"></view>
           <view class="title">
             全部产品
           </view>
         </navigator>
         <navigator url="/subpkg/goods_history/goods_history" class="item">
-          <view class="iconfont icon-history-copy"></view>
+          <view class="iconfont icon-history"></view>
           <view class="title">
             最近浏览
           </view>
@@ -65,13 +65,13 @@
           </view>
         </navigator>
         <navigator url="/subpkg/my_service/my_service" class="item">
-          <view class=" iconfont icon-RectangleCopy14"></view>
+          <view class=" iconfont icon-kefu"></view>
           <view class="title">
             伟烽服务
           </view>
         </navigator>
         <navigator url="/subpkg/cooperation/cooperation" class="item">
-          <view class="iconfont icon-RectangleCopy1"></view>
+          <view class="iconfont icon-hezuo"></view>
           <view class="title">
             供应商合作
           </view>
@@ -102,10 +102,14 @@
       };
     },
     onLoad() {
-      this.getHotList()
+
     },
     methods: {
-      async getHotList() {},
+      gotoSearch(kw) {
+        uni.navigateTo({
+          url: '/subpkg/goods_detail/goods_detail?goods_id=' + 475
+        })
+      }
     },
     onShareAppMessage(res) {
       return {
@@ -205,6 +209,7 @@
 
     .more {
       display: flex;
+      align-items: center;
       font-size: 24rpx;
 
       text {
@@ -212,8 +217,9 @@
         margin: auto;
       }
 
-      .uni-icons {
-        margin-left: 8rpx;
+      .iconfont {
+        color: #999999;
+        font-size: 40rpx;
       }
 
     }

@@ -37,7 +37,7 @@
 }
 .scroll-view .scroll-item.active {
   color: #3266cc;
-  border-bottom: 4rpx solid #3266cc;
+  border-bottom: 3px solid #3266cc;
 }
 .list .list-item {
   position: relative;
@@ -49,17 +49,19 @@
 }
 .list .list-item .icon1 {
   padding-right: 20rpx;
+  color: #3266cc;
+  font-size: 20px;
 }
 .list .list-item text {
   position: absolute;
-  right: 80rpx;
+  right: 60rpx;
   font-size: 26rpx;
   color: #b9b9b9;
 }
 .list .list-item .icon2 {
   position: absolute;
   font-size: 50rpx;
-  right: 20rpx;
+  right: 10rpx;
   color: #cccccc;
 }
 
