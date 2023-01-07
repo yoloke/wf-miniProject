@@ -21,11 +21,10 @@
     {
       "root": "pages_my",
       "pages": [
-        "my_news/my_news",
         "my_collection/my_collection",
-        "my_email/my_email",
         "my_feedback/my_feedback",
-        "contact_us/contact_us"
+        "contact_us/contact_us",
+        "my_login/my_login"
       ]
     },
     {

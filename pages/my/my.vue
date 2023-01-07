@@ -3,8 +3,8 @@
     <view class="header">
       <image class="target" src="https://wf-cloud-img.oss-cn-hangzhou.aliyuncs.com/image/target.jpg" mode="widthFix">
       </image>
-      <block>尊敬的会员</block>
-      <view class="username">{{username}}</view>
+      <block v-if="username!=='登录'">尊敬的会员</block>
+      <view class="username" @click="getUserInfo">{{username}}</view>
     </view>
     <view class="list1">
       <view class="icon">
@@ -37,12 +37,23 @@
   export default {
     data() {
       return {
-        username: "153****4496",
+        username: "登录",
       }
     },
     methods: {
-
+      getUserInfo() {
+        // uni.getUserInfo({
+        //   provider: 'weixin',
+        //   success: (res) => {
+        //     console.log('getUserInfo', res);
+        //   },
+        // });
+        uni.navigateTo({
+          url: '/pages_my/my_login/my_login'
+        })
+      },
     }
+
   }
 </script>
 

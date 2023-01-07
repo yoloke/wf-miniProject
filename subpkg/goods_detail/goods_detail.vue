@@ -134,14 +134,17 @@
 
       //浏览pdf文件
       openPdf() {
-        wx.downloadFile({ //下载对应文件
-          url: "https://www.te.com.cn/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837_Grove_Board%7FA%7Fpdf%7FEnglish%7FENG_DS_MS5837_Grove_Board_A.pdf%7FCAT-DCS0043", // 下载文件网络地址
-          success: function(res) {
-            var filePath = res.tempFilePath; //本地文件路径    
-            uni.navigateTo({
-              url: '/pages_goods/goods_pdf/goods_pdf?src=' + filePath
-            })
-          }
+        // wx.downloadFile({ //下载对应文件
+        //   url: "https://www.te.com.cn/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5837_Grove_Board%7FA%7Fpdf%7FEnglish%7FENG_DS_MS5837_Grove_Board_A.pdf%7FCAT-DCS0043", // 下载文件网络地址
+        //   success: function(res) {
+        //     var filePath = res.tempFilePath; //本地文件路径    
+        //     uni.navigateTo({
+        //       url: '/pages_goods/goods_pdf/goods_pdf?src=' + filePath
+        //     })
+        //   }
+        // })
+        uni.navigateTo({
+          url: '/pages_goods/goods_pdf/goods_pdf?src='
         })
       },
       gotoGoodsAnalysis() {
