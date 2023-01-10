@@ -6,7 +6,7 @@
   },
   "setting": {
     "urlCheck": false,
-    "es6": false,
+    "es6": true,
     "postcss": false,
     "minified": false,
     "newFeature": true,
@@ -19,7 +19,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx801fb6d90c631dcc",
+  "appid": "wx8283b3797db2a310",
   "projectname": "wf-mini",
   "condition": {
     "search": {

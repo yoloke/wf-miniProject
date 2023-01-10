@@ -16,6 +16,7 @@
           <uni-easyinput type="password" v-model="formData.pass" placeholder="请输入密码" />
         </uni-forms-item>
         <button @click="submitForm">登录</button>
+        <!--  <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">fff</button> -->
       </uni-forms>
     </view>
   </view>
@@ -30,6 +31,12 @@
           pass: ""
         }
       };
+    },
+    methods: {
+      // 获取手机号
+      getPhoneNumber(e) {
+
+      }
     }
   }
 </script>

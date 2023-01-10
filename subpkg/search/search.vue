@@ -92,7 +92,7 @@
       },
       gotoDetail(item) {
         uni.navigateTo({
-          url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
+          url: '/pages_goods/goods_detail/goods_detail?goods_id=' + item.goods_id
         })
       },
       // 保存搜索关键词的方法

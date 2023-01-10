@@ -28,6 +28,13 @@ view {
   padding: 20rpx 50rpx;
   color: #323232;
 }
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+.image-box image {
+  width: 80%;
+}
 .first-paragraph {
   margin-top: 60rpx;
 }

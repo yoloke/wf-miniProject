@@ -50,13 +50,6 @@
         },
         {
           "name": "",
-          "pathName": "subpkg/goods_detail/goods_detail",
-          "query": "goods_id=569",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "pages_goods/goods_analysis/goods_analysis",
           "query": "goods_info=%7B%22goods_id%22%3A569%2C%22goods_name%22%3A%22%E5%B0%8F%E5%A4%A9%E9%B9%85(Little%20Swan)TG100VN02DG5%2010%E5%85%AC%E6%96%A4%E6%B4%97%E8%A1%A3%E6%9C%BA%20%E6%BB%9A%E7%AD%92%E6%B4%97%E8%A1%A3%E6%9C%BA%20%E5%8F%98%E9%A2%91%E9%9D%99%E9%9F%B3%20%E9%AB%98%E6%B8%A9%E7%AD%92%E8%87%AA%E6%B4%81%20%E5%AE%B6%E7%94%A8%20%E9%87%91%E8%89%B2%22%2C%22date%22%3A%222023-01-03%22%7D",
           "launchMode": "default",
@@ -73,6 +66,34 @@
           "name": "",
           "pathName": "pages/my/my",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages_goods/goods_parms/goods_parms",
+          "query": "goods_id=923",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages_goods/goods_chip/goods_chip",
+          "query": "goods_id=456",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages_goods/goods_detail/goods_detail",
+          "query": "goods_id=923",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages_goods/goods_buy/goods_buy",
+          "query": "goods_id=923",
           "launchMode": "default",
           "scene": null
         }

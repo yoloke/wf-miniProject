@@ -24,13 +24,14 @@
           热门产品
         </view>
       </view>
-      <navigator url="../../subpkg/goods_all/goods_all" class="more">
+      <navigator url="../../pages_goods/goods_all/goods_all" class="more">
         <text>更多</text>
         <view class="iconfont icon-next"></view>
       </navigator>
     </view>
     <view class="hot-goods-list">
-      <navigator class="item" v-for="(item,i) in 8" :key="i" url="/subpkg/goods_detail/goods_detail?goods_id=569">
+      <navigator class="item" v-for="(item,i) in 8" :key="i"
+        url="../../pages_goods/goods_detail/goods_detail?goods_id=569">
         <image :src="testImg" mode="widthFix"></image>
       </navigator>
 
@@ -46,13 +47,13 @@
             参数选型
           </view>
         </navigator>
-        <navigator url="../../subpkg/goods_all/goods_all" class="item">
+        <navigator url="../../pages_goods/goods_all/goods_all" class="item">
           <view class="iconfont icon-changku"></view>
           <view class="title">
             全部产品
           </view>
         </navigator>
-        <navigator url="/subpkg/goods_history/goods_history" class="item">
+        <navigator url="/pages_goods/goods_history/goods_history" class="item">
           <view class="iconfont icon-history"></view>
           <view class="title">
             最近浏览
@@ -107,7 +108,7 @@
     methods: {
       gotoSearch(kw) {
         uni.navigateTo({
-          url: '/subpkg/goods_detail/goods_detail?goods_id=' + 475
+          url: '/pages_goods/goods_detail/goods_detail?goods_id=' + 475
         })
       }
     },

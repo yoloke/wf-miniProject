@@ -1,0 +1,1 @@
+<view class="my-search-container"><view data-event-opts="{{[['tap',[['searchBoxHandler',['$event']]]]]}}" class="my-search-box" bindtap="__e"><view class="iconfont icon-sousuo"></view><text class="placeholder">请输入您要的芯片型号</text></view></view>

@@ -27,8 +27,6 @@
   "subPackages": [{
     "root": "subpkg",
     "pages": [{
-      "path": "goods_detail/goods_detail"
-    }, {
       "path": "search/search",
       "style": {
         "navigationBarTitleText": "搜索结果"
@@ -43,25 +41,6 @@
       "path": "cooperation/cooperation",
       "style": {
         "navigationBarTitleText": "供应商合作"
-      }
-
-    }, {
-      "path": "goods_history/goods_history",
-      "style": {
-        "navigationBarTitleText": "最近浏览"
-      }
-
-    }, {
-      "path": "goods_all/goods_all",
-      "style": {
-        "navigationBarTitleText": "全部产品"
-      }
-
-    }, {
-      "path": "my_apply/my_apply",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
       }
 
     }]
@@ -99,11 +78,74 @@
   }, {
     "root": "pages_goods",
     "pages": [{
-      "path": "goods_pdf/goods_pdf"
-    }, {
-      "path": "goods_analysis/goods_analysis"
+        "path": "goods_apply/goods_apply",
+        "style": {
+          "navigationBarTitleText": "",
+          "enablePullDownRefresh": false
+        }
 
-    }]
+      },
+      {
+        "path": "goods_history/goods_history",
+        "style": {
+          "navigationBarTitleText": "最近浏览"
+        }
+
+      }, {
+        "path": "goods_all/goods_all",
+        "style": {
+          "navigationBarTitleText": "全部产品"
+        }
+
+      }, {
+        "path": "goods_detail/goods_detail"
+      }, {
+        "path": "goods_pdf/goods_pdf"
+      }, {
+        "path": "goods_analysis/goods_analysis"
+
+      }, {
+        "path": "goods_chip/goods_chip",
+        "style": {
+          "navigationBarTitleText": "",
+          "enablePullDownRefresh": false
+        }
+
+      }, {
+        "path": "official_website/official_website",
+        "style": {
+          "navigationBarTitleText": "官网"
+        }
+
+      }
+        ,{
+                    "path" : "goods_replace/goods_replace",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_buy/goods_buy",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "goods_parms/goods_parms",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
   }],
   "globalStyle": {
     "navigationBarTextStyle": "white",

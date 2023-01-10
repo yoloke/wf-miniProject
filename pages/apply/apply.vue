@@ -7,7 +7,8 @@
       </view>
     </scroll-view>
     <view class="list">
-      <navigator class="list-item" v-for="(item, i) in cateLevel2" :key="i" url="../../subpkg/my_apply/my_apply">
+      <navigator class="list-item" v-for="(item, i) in cateLevel2" :key="i"
+        url="../../pages_goods/goods_apply/goods_apply">
         <view class="icon1 iconfont icon-yingyong"></view>
         {{item.cat_name}}
         <text class="date">2021-02-01</text>

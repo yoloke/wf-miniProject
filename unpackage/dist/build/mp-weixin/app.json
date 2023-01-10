@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/cate/cate",
+    "pages/apply/apply",
+    "pages/my/my"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "search/search",
+        "my_service/my_service",
+        "cooperation/cooperation",
+        "my_apply/my_apply"
+      ]
+    },
+    {
+      "root": "pages_my",
+      "pages": [
+        "my_collection/my_collection",
+        "my_feedback/my_feedback",
+        "contact_us/contact_us",
+        "my_login/my_login"
+      ]
+    },
+    {
+      "root": "pages_goods",
+      "pages": [
+        "goods_history/goods_history",
+        "goods_all/goods_all",
+        "goods_detail/goods_detail",
+        "goods_pdf/goods_pdf",
+        "goods_analysis/goods_analysis",
+        "goods_chip/goods_chip"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#3266cc"
+  },
+  "tabBar": {
+    "selectedColor": "#3869b0",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "查询",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "static/tab_icons/cate.png",
+        "selectedIconPath": "static/tab_icons/cate-active.png"
+      },
+      {
+        "pagePath": "pages/apply/apply",
+        "text": "应用",
+        "iconPath": "static/tab_icons/apply.png",
+        "selectedIconPath": "static/tab_icons/apply-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
+}

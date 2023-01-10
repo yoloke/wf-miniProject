@@ -9,13 +9,9 @@
     {
       "root": "subpkg",
       "pages": [
-        "goods_detail/goods_detail",
         "search/search",
         "my_service/my_service",
-        "cooperation/cooperation",
-        "goods_history/goods_history",
-        "goods_all/goods_all",
-        "my_apply/my_apply"
+        "cooperation/cooperation"
       ]
     },
     {
@@ -30,8 +26,17 @@
     {
       "root": "pages_goods",
       "pages": [
+        "goods_apply/goods_apply",
+        "goods_history/goods_history",
+        "goods_all/goods_all",
+        "goods_detail/goods_detail",
         "goods_pdf/goods_pdf",
-        "goods_analysis/goods_analysis"
+        "goods_analysis/goods_analysis",
+        "goods_chip/goods_chip",
+        "official_website/official_website",
+        "goods_replace/goods_replace",
+        "goods_buy/goods_buy",
+        "goods_parms/goods_parms"
       ]
     }
   ],
