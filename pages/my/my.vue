@@ -3,8 +3,8 @@
     <view class="header">
       <image class="target" src="https://wf-cloud-img.oss-cn-hangzhou.aliyuncs.com/image/target.jpg" mode="widthFix">
       </image>
-      <block v-if="username!=='登录'">尊敬的会员</block>
-      <view class="username" @click="getUserInfo">{{username}}</view>
+      <block v-if="token">尊敬的会员</block>
+      <view class="username" @click="getUserInfo" v-if="!token">{{username}}</view>
     </view>
     <view class="list1">
       <view class="icon">
@@ -34,6 +34,10 @@
 </template>
 
 <script>
+  import {
+    mapState,
+    mapMutations
+  } from 'vuex'
   export default {
     data() {
       return {
@@ -41,6 +45,8 @@
       }
     },
     methods: {
+      // 2. 调用 mapMutations 辅助方法，把 m_user 模块中的 updateUserInfo 映射到当前组件中使用
+      ...mapMutations('m_user', ['updateUserInfo']),
       getUserInfo() {
         // uni.getUserInfo({
         //   provider: 'weixin',
@@ -52,6 +58,10 @@
           url: '/pages_my/my_login/my_login'
         })
       },
+    },
+    computed: {
+      // token 是用户登录成功之后的 token 字符串
+      ...mapState('m_user', ['token']),
     }
 
   }

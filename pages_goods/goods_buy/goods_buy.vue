@@ -41,7 +41,12 @@
       <text style="font-size:20px ;" class="iconfont icon-next"></text>
     </view>
     <view class="buy-button">
-      <view>总计 为您节省</view>
+      <view>
+        <view class="totle"><text>总计 : </text><text>￥{{allPrice}}</text></view>
+        <view class="disnum">
+          为您节省￥{{0}}
+        </view>
+      </view>
       <view class="tijiao">提 交</view>
     </view>
   </view>
@@ -189,6 +194,24 @@
     margin: 50px 0;
     height: 120rpx;
     border-bottom: 1px solid #efefef;
+
+    .totle {
+      & text:nth-child(1) {
+        margin-right: 6px;
+        font-size: 14px;
+      }
+
+      & text:nth-child(2) {
+        color: #c00000;
+        font-weight: 800;
+      }
+    }
+
+    .disnum {
+      color: #999999;
+      font-size: 12px;
+      margin-top: 4px;
+    }
 
     .tijiao {
       height: 40px;

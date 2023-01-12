@@ -119,6 +119,19 @@ page {
   height: 120rpx;
   border-bottom: 1px solid #efefef;
 }
+.buy-button .totle text:nth-child(1) {
+  margin-right: 6px;
+  font-size: 14px;
+}
+.buy-button .totle text:nth-child(2) {
+  color: #c00000;
+  font-weight: 800;
+}
+.buy-button .disnum {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 4px;
+}
 .buy-button .tijiao {
   height: 40px;
   line-height: 40px;

@@ -16,7 +16,7 @@
           <uni-easyinput type="password" v-model="formData.pass" placeholder="请输入密码" />
         </uni-forms-item>
         <button @click="submitForm">登录</button>
-        <!--  <button open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">fff</button> -->
+        <button type="primary" class="btn-login" open-type="getUserInfo" @getuserinfo="getUserInfo">一键登录</button>
       </uni-forms>
     </view>
   </view>
@@ -36,8 +36,16 @@
       // 获取手机号
       getPhoneNumber(e) {
 
+      },
+      // 获取微信用户的基本信息
+      getUserInfo(e) {
+        // 判断是否获取用户信息成功
+        if (e.detail.errMsg === 'getUserInfo:fail auth deny') return uni.$showMsg('您取消了登录授权！')
+
+        // 获取用户信息成功， e.detail.userInfo 就是用户的基本信息
+        console.log(e)
       }
-    }
+    },
   }
 </script>
 

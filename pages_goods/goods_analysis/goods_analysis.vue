@@ -9,15 +9,19 @@
       </view>
     </view>
     <view class="goods-compare">
-      <view class="">
+      <view class="goods-compare-title">
         恒压恒流DC-DC
       </view>
-      <view class="">
-        hggg
+      <view class="current-goods">
+        <view>WF5803C</view>
       </view>
-      <view class="">
-        hjhh
-      </view>
+      <scroll-view class="goods-compare-item" scroll-x="true">
+        <view>WF5803C</view>
+        <view>WF5803C</view>
+        <view>WF5803C</view>
+        <view>WF5803C</view>
+        <view>WF5803C</view>
+      </scroll-view>
     </view>
     <view class="parms">
       <text class="title">—— 主要参数 ——</text>
@@ -134,14 +138,40 @@
     justify-content: space-around;
     margin-bottom: 20rpx;
 
-    view {
-      width: 100%;
+    .goods-compare-title {
+      width: 33%;
       height: 120rpx;
       line-height: 120rpx;
       text-align: center;
       border: 1rpx solid #c6d1c8;
       padding: 0 10rpx;
       font-size: 28rpx;
+    }
+
+    .current-goods {
+      width: 33%;
+      height: 120rpx;
+      line-height: 120rpx;
+      text-align: center;
+      border: 1rpx solid #c6d1c8;
+      border-left: none;
+      padding: 0 10rpx;
+      font-size: 28rpx;
+    }
+
+    .goods-compare-item {
+      width: 34%;
+      height: 120rpx;
+      white-space: nowrap;
+      // line-height: 120rpx;
+      // text-align: center;
+      border: 1rpx solid #c6d1c8;
+
+      border-left: none;
+
+      view {
+        display: inline-block;
+      }
     }
   }
 

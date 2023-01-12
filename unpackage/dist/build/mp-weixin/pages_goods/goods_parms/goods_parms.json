@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "detail-title": "/components/detail-title/detail-title",
+    "uni-table": "/uni_modules/uni-table/components/uni-table/uni-table",
+    "uni-tr": "/uni_modules/uni-table/components/uni-tr/uni-tr",
+    "uni-td": "/uni_modules/uni-table/components/uni-td/uni-td"
+  }
+}
