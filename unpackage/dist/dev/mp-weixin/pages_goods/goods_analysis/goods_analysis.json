@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "qiun-data-charts": "/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts"
+    "uni-table": "/uni_modules/uni-table/components/uni-table/uni-table",
+    "uni-tr": "/uni_modules/uni-table/components/uni-tr/uni-tr",
+    "uni-td": "/uni_modules/uni-table/components/uni-td/uni-td"
   }
 }

@@ -8,47 +8,29 @@
         表格对比
       </view>
     </view>
-    <view class="goods-compare">
-      <view class="goods-compare-title">
-        恒压恒流DC-DC
-      </view>
-      <view class="current-goods">
-        <view>WF5803C</view>
-      </view>
-      <scroll-view class="goods-compare-item" scroll-x="true">
-        <view>WF5803C</view>
-        <view>WF5803C</view>
-        <view>WF5803C</view>
-        <view>WF5803C</view>
-        <view>WF5803C</view>
-      </scroll-view>
-    </view>
-    <view class="parms">
-      <text class="title">—— 主要参数 ——</text>
-      <view class="parms-table">
-        <view class="left">
-          <view class="parms-name">最大电阻压力</view>
-          <view class="parms-name">开关管阻抗</view>
-          <view class="parms-name">最大支持功率</view>
-          <view class="parms-name">最大工作温度</view>
-        </view>
-        <view class="right1" v-if="show">
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-          <view class="parms-name">57V</view>
-        </view>
-        <view class="right2" v-if="!show">
-          <qiun-data-charts type="radar" :opts="opts" :chartData="chartData" />
-        </view>
-      </view>
-    </view>
+    <uni-table class="table-box" stripe emptyText="暂无更多数据">
+      <uni-tr class="">
+        <uni-td class="">最大电阻压力</uni-td>
+        <uni-td class="">57 v</uni-td>
+        <uni-td class="">58 v</uni-td>
+      </uni-tr>
+      <uni-tr class="">
+        <uni-td class="">最大电阻压力</uni-td>
+        <uni-td class="">57 v</uni-td>
+        <uni-td class="">58 v</uni-td>
+      </uni-tr>
+      <uni-tr class="">
+        <uni-td class="">最大电阻压力</uni-td>
+        <uni-td class="">57 v</uni-td>
+        <uni-td class="">58 v</uni-td>
+      </uni-tr>
+      <uni-tr class="">
+        <uni-td class="">最大电阻压力</uni-td>
+        <uni-td class="">57 v</uni-td>
+        <uni-td class="">58 v</uni-td>
+      </uni-tr>
 
-
+    </uni-table>
   </view>
 </template>
 
@@ -88,7 +70,7 @@
       }
     },
     onLoad() {
-      this.getServerData();
+      //this.getServerData();
     },
     methods: {
       dd() {
@@ -133,106 +115,16 @@
 
   }
 
-  .goods-compare {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20rpx;
+  .table-box {
+    table-layout: fixed;
+    max-width: 100%;
+    overflow-x: auto;
 
-    .goods-compare-title {
-      width: 33%;
-      height: 120rpx;
-      line-height: 120rpx;
-      text-align: center;
-      border: 1rpx solid #c6d1c8;
-      padding: 0 10rpx;
-      font-size: 28rpx;
-    }
-
-    .current-goods {
-      width: 33%;
-      height: 120rpx;
-      line-height: 120rpx;
-      text-align: center;
-      border: 1rpx solid #c6d1c8;
-      border-left: none;
-      padding: 0 10rpx;
-      font-size: 28rpx;
-    }
-
-    .goods-compare-item {
-      width: 34%;
-      height: 120rpx;
-      white-space: nowrap;
-      // line-height: 120rpx;
-      // text-align: center;
-      border: 1rpx solid #c6d1c8;
-
-      border-left: none;
-
-      view {
-        display: inline-block;
-      }
-    }
-  }
-
-  .parms {
-    border: 1rpx solid #c6d1c8;
-    color: #505e4f;
-    font-size: 15px;
-
-    .title {
-      background-color: #d8f2d9;
-      display: block;
-      text-align: center;
-      height: 80rpx;
-      line-height: 80rpx;
-      font-weight: 600;
-    }
-
-    .parms-table {
-      display: flex;
-      min-height: 0;
-      overflow: hidden;
-
-      .left {
-        flex: 1;
-        min-width: 0;
-        min-height: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: #d8f2d9;
-
-        .parms-name {
-          height: 100%;
-          padding: 22rpx;
-          display: flex;
-          align-items: center;
-          border-right: 1rpx solid #c6d1c8;
-          border-top: 1rpx solid #c6d1c8;
-        }
-      }
-
-      .right1 {
-        flex: 2;
-        display: grid;
-        grid-template-columns: auto auto;
-
-        .parms-name {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-right: 1rpx solid #c6d1c8;
-          border-top: 1rpx solid #c6d1c8;
-        }
-      }
-
-      .right2 {
-        flex: 2;
-        min-width: 0;
-        border-right: 1rpx solid #c6d1c8;
-        border-top: 1rpx solid #c6d1c8;
-      }
+    .uni-table-td {
+      padding: 0 !important;
+      border: 1px solid gray;
+      width: 100px;
+      height: 30px;
     }
   }
 </style>

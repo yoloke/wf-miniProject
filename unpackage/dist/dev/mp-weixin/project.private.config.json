@@ -103,6 +103,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages_goods/goods_analysis/goods_analysis",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

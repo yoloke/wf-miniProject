@@ -26,12 +26,12 @@
 /* 文章场景相关 */
 .uni-table-td {
   display: table-cell;
-  padding: 8px 10px;
+  height: 80rpx;
+  line-height: 80rpx;
   font-size: 14px;
   border-bottom: 1px #EBEEF5 solid;
   font-weight: 400;
   color: #606266;
-  line-height: 23px;
   box-sizing: border-box;
 }
 .table--border {
