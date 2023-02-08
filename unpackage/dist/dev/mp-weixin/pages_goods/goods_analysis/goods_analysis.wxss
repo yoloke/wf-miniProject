@@ -38,15 +38,91 @@
   border-bottom: 2px solid #3463c6;
   color: #010101;
 }
-.table-box {
-  table-layout: fixed;
-  max-width: 100%;
-  overflow-x: auto;
+.goods-compare {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
 }
-.table-box .uni-table-td {
-  padding: 0 !important;
-  border: 1px solid gray;
-  width: 100px;
-  height: 30px;
+.goods-compare .goods-compare-title {
+  width: 33%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  border: 1rpx solid #c6d1c8;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+.goods-compare .current-goods {
+  width: 33%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  border: 1rpx solid #c6d1c8;
+  border-left: none;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+.goods-compare .goods-compare-item {
+  width: 34%;
+  height: 120rpx;
+  white-space: nowrap;
+  border: 1rpx solid #c6d1c8;
+  border-left: none;
+}
+.goods-compare .goods-compare-item view {
+  display: inline-block;
+}
+.parms {
+  border: 1rpx solid #c6d1c8;
+  color: #505e4f;
+  font-size: 15px;
+}
+.parms .title {
+  background-color: #d8f2d9;
+  display: block;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 600;
+}
+.parms .parms-table {
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+}
+.parms .parms-table .left {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #d8f2d9;
+}
+.parms .parms-table .left .parms-name {
+  height: 100%;
+  padding: 22rpx;
+  display: flex;
+  align-items: center;
+  border-right: 1rpx solid #c6d1c8;
+  border-top: 1rpx solid #c6d1c8;
+}
+.parms .parms-table .right1 {
+  flex: 2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.parms .parms-table .right1 .parms-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1rpx solid #c6d1c8;
+  border-top: 1rpx solid #c6d1c8;
+}
+.parms .parms-table .right2 {
+  flex: 2;
+  min-width: 0;
+  border-right: 1rpx solid #c6d1c8;
+  border-top: 1rpx solid #c6d1c8;
 }
 
